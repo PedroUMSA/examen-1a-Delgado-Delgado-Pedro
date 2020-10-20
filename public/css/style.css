@@ -1,0 +1,23 @@
+.img1{
+	background-image: url(user2.png);
+	height: 100px;
+	width: 100px;
+	background-color: white;
+	border-radius:50% 10% 50% 10%;
+	margin: 0 0 0 250px;
+}
+.img2{
+	background-image: url(user.png);
+	height: 100px;
+	width: 100px;
+	background-color:dodgerblue;
+    border-radius:10% 50% 10% 50%;
+	margin: 0 0 0 500px;
+}
+.container{
+    background-color:aqua;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 10px;
+}
