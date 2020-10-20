@@ -1,7 +1,7 @@
-<body>
+<body class="body11">
     
-    <div class="container">
-        <div>
+    <div class="padre">
+        <div class="hijo">
     <?php
     if(isset($var)){
         if($var){
@@ -9,7 +9,7 @@
         }
         
     }
-    echo '<img class="img2">';
+    echo '<header><center><img class="img2"></center></header>';
     echo form_open('/home/guarda','method="GET"');
     echo form_label('User','user');
     echo form_input(array('name'=>'user','placeholder'=>'User','class'=>'form-control'));

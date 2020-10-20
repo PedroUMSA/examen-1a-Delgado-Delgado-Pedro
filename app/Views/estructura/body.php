@@ -1,6 +1,8 @@
 <?php
 $bool = false;
 $color = '';
+$clase = 'class="body11"';
+$claseb = 'class="btn1"';
 if (isset($_GET["select"])) {
     $bool = true;
     $condicion = $_GET["select"];
@@ -9,70 +11,68 @@ if (isset($_GET["select"])) {
 
         case '0':
             # code...
-            $color1 = '#092756';
-            $color2 = '#2466bd';
+            $clase = 'class="body11"';
+            $claseb = 'class="btn1"';
             break;
         case '1':
             # code...
-            $color1 = '#177534';
-            $color2 = '#26bf55';
+            $clase = 'class="body12"';
+            $claseb = 'class="btn2"';
             break;
         case '2':
             # code...
-            $color1 = '#820d0d';
-            $color2 = '#e01616';
+            $clase = 'class="body13"';
+            $claseb = 'class="btn3"';
             break;
         case '3':
             # code.
-            $color1 = '#737814';
-            $color2 = '#c1c926';
+            $clase = 'class="body14"';
+            $claseb = 'class="btn4"';
             break;
 
         default:
             # code...
             break;
     }
-    $color = 'style="background:' . $color2 . ' ;"';
+    
 }
 
 ?>
 
-<body <?php if ($bool) {
-            echo 'style="background:' . $color1 . ' ;color:white;"';
-        } else {
-            echo 'style="
-            background: black;
-            color:white;
-            "';
-        } ?>>
-    <div class="container">
+<body <?php echo $clase; ?>>
+    <div class="padre2">
+        <div class="hijo2">
+
+        
         <br>
         <?php
 
-        echo '<img class="img1">';
+        echo '<header><center><img class="img1"></center></header>';
         if (isset($var)) {
-            echo '<h1> Bienvenida ' . $var . '</h1>';
+            echo '<center><h1>' . $var . '</h1></center>';
         }
         if (isset($_GET['user2'])) {
             $var = $_GET['user2'];
-            echo '<h1>Bienvenida ' . $var . '</h1>';
+            echo '<center><h1>' . $var . '</h1></center>';
         }
-       
+
         echo form_open('/home/refres', 'method="GET"');
 
         echo form_input(array('name' => 'user2', 'placeholder' => 'User2', 'style' => 'display: none;', 'value' => $var));
-
+        echo '<center>';
         echo form_multiselect('select', ['Azul', 'Verde', 'Rojo', 'Amarillo']);
-        echo form_submit('rec', 'Recargar', $color);
+        echo form_submit('rec', 'Recargar', $claseb);
+        echo '</center>';
         echo form_close();
         echo '<br>';
         //salir
         echo form_open('/home/index');
-        echo form_submit('salir', 'Salir', $color);
+        echo form_submit('salir', 'Salir', $claseb);
         echo form_close();
 
 
         ?>
+        </div>
     </div>
 </body>
 
